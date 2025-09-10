@@ -1,79 +1,253 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portofolio - Nama Kamu</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Nabilah Nuril Zahra M. Karim</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for uniqueness and enhancements */
+        .hero-background {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .skill-bar {
+            background-color: #e2e8f0;
+            width: 100%;
+            height: 8px;
+            border-radius: 4px;
+        }
+        .skill-fill {
+            background-color: #667eea;
+            height: 8px;
+            border-radius: 4px;
+            transition: width 2s;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body>
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <h1>Nama Kamu</h1>
-      <p>Mahasiswa Informatika | Web Developer | UI/UX Enthusiast</p>
-      <a href="#kontak" class="btn">Hubungi Saya</a>
-    </div>
-  </header>
-
-  <!-- Tentang Saya -->
-  <section id="tentang">
-    <div class="container">
-      <h2>Tentang Saya</h2>
-      <p>
-        Halo! Saya adalah mahasiswa Informatika dengan minat di bidang pengembangan web
-        dan desain antarmuka. Senang belajar teknologi baru dan mengerjakan project kreatif.
-      </p>
-    </div>
-  </section>
-
-  <!-- Keahlian -->
-  <section id="keahlian">
-    <div class="container">
-      <h2>Keahlian</h2>
-      <ul>
-        <li>HTML, CSS, JavaScript</li>
-        <li>React & Node.js</li>
-        <li>Database: MySQL & MongoDB</li>
-        <li>UI/UX Design (Figma)</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Portofolio -->
-  <section id="portofolio">
-    <div class="container">
-      <h2>Project Portofolio</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>To-Do List App</h3>
-          <p>Aplikasi pencatat tugas dengan deadline menggunakan Java.</p>
+<body class="bg-gray-100 font-sans fade-in">
+    <!-- Header/Navbar -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-gray-800">Portofolio</div>
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#about" class="text-gray-700 hover:text-blue-600 transition">Tentang Saya</a></li>
+                    <li><a href="#skills" class="text-gray-700 hover:text-blue-600 transition">Keahlian</a></li>
+                    <li><a href="#projects" class="text-gray-700 hover:text-blue-600 transition">Proyek</a></li>
+                    <li><a href="#education" class="text-gray-700 hover:text-blue-600 transition">Pendidikan</a></li>
+                    <li><a href="#contact" class="text-gray-700 hover:text-blue-600 transition">Kontak</a></li>
+                </ul>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z"/></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <ul class="p-4 space-y-2">
+                <li><a href="#about" class="block text-gray-700 hover:text-blue-600 transition">Tentang Saya</a></li>
+                <li><a href="#skills" class="block text-gray-700 hover:text-blue-600 transition">Keahlian</a></li>
+                <li><a href="#projects" class="block text-gray-700 hover:text-blue-600 transition">Proyek</a></li>
+                <li><a href="#education" class="block text-gray-700 hover:text-blue-600 transition">Pendidikan</a></li>
+                <li><a href="#contact" class="block text-gray-700 hover:text-blue-600 transition">Kontak</a></li>
+            </ul>
         </div>
-        <div class="card">
-          <h3>Website E-Commerce</h3>
-          <p>Website sederhana untuk toko online menggunakan React & Firebase.</p>
-        </div>
-        <div class="card">
-          <h3>Desain Mobile UI</h3>
-          <p>Prototipe aplikasi keuangan pribadi menggunakan Figma.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Kontak -->
-  <section id="kontak">
-    <div class="container">
-      <h2>Kontak</h2>
-      <p>Email: <a href="mailto:emailkamu@gmail.com">emailkamu@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://linkedin.com/in/username" target="_blank">linkedin.com/in/username</a></p>
-      <p>GitHub: <a href="https://github.com/username" target="_blank">github.com/username</a></p>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero-background text-white py-20 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2028b806-49a4-4be3-9676-339c2c3da7c6.png" alt="Portrait of a young woman with a confident smile, wearing professional attire in a natural indoor setting with soft lighting, representing a dedicated student in information technology" class="mx-auto mb-6 rounded-full border-4 border-white shadow-lg" onerror="this.style.display='none'">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Nabilah Nuril Zahra M. Karim</h1>
+            <p class="text-xl mb-8">Mahasiswa Teknik Informatika, Universitas Islam Negeri Sunan Gunung Djati Bandung</p>
+            <p class="text-lg mb-8">Saya adalah seorang mahasiswa yang antusias dalam bidang teknologi informasi, dengan minat dalam pengembangan perangkat lunak, kecerdasan buatan, dan analitik data. Mari kita jelajahi journey saya!</p>
+            <a href="#contact" class="bg-white text-purple-700 py-3 px-6 rounded-full font-semibold hover:bg-gray-200 transition">Hubungi Saya</a>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Nama Kamu. Dibuat dengan ❤️.</p>
-  </footer>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Tentang Saya</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/69ded98e-4d71-49a3-8ca5-58d481e1f008.png" alt="Abstract representation of technological innovation featuring interconnected gears, circuit boards, and floating code symbols in a futuristic digital landscape with vibrant blue and purple hues" class="rounded-lg shadow-lg" onerror="this.style.display='none'">
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <p class="text-lg text-gray-700 mb-4">Saya adalah mahasiswa Teknik Informatika di Universitas Islam Negeri Sunan Gunung Djati Bandung. Dengan latar belakang ini, saya telah mengembangkan keahlian dalam berbagai bahasa pemrograman seperti Python, JavaScript, dan Java. Saya percaya bahwa teknologi dapat membawa perubahan positif, dan saya selalu mencari peluang untuk belajar hal baru dan berkontribusi dalam proyek-proyek inovatif.</p>
+                    <p class="text-lg text-gray-700">Di luar akademik, saya aktif dalam komunitas teknologi, menghadiri workshop, dan berkolaborasi dengan teman-teman untuk membangun aplikasi yang berdampak. Hobiku termasuk membaca buku teknologi, bermain olahraga rekreasi, dan eksplorasi dunia digital.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Keahlian</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Pemrograman</h3>
+                    <div class="skill-bar mb-2">
+                        <div class="skill-fill" style="width: 85%;" id="skill1"></div>
+                    </div>
+                    <p class="text-gray-600">Keahlian dalam Python, JavaScript, Java, dan framework seperti React dan Node.js.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Basis Data</h3>
+                    <div class="skill-bar mb-2">
+                        <div class="skill-fill" style="width: 75%;" id="skill2"></div>
+                    </div>
+                    <p class="text-gray-600">Pengalaman dengan MySQL, MongoDB, dan desain database relasional.</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Kecerdasan Buatan</h3>
+                    <div class="skill-bar mb-2">
+                        <div class="skill-fill" style="width: 70%;" id="skill3"></div>
+                    </div>
+                    <p class="text-gray-600">Pengetahuan dasar dalam machine learning dan analitik data dengan libraries seperti TensorFlow.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Proyek</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/4541ea33-3e36-4053-8865-8988ebc497e8.png" alt="Screenshot of a modern website project with clean navigation, user-friendly interface, colorful banners, and responsive design elements in a tech-themed layout" class="w-full h-48 object-cover" onerror="this.style.display='none'">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Sistem Manajemen Data Mahasiswa</h3>
+                        <p class="text-gray-600 mb-4">Proyek akhir yang dibangun menggunakan React dan Node.js untuk mengelola data mahasiswa di universitas.</p>
+                        <a href="#" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/000c4f94-901f-4aae-a98f-6e775944f50d.png" alt="Mockup of a mobile application interface showing intuitive navigation, data visualization charts, and interactive buttons on a smartphone screen with vibrant gradients" class="w-full h-48 object-cover" onerror="this.style.display='none'">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Aplikasi Mobile Edukasi Islam</h3>
+                        <p class="text-gray-600 mb-4">App mobile untuk membantu pendidikan agama Islam, dibuat dengan Flutter untuk fitur interaktif.</p>
+                        <a href="#" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Lihat Detail</a>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 rounded-lg overflow-hidden shadow-lg transition-all duration-300">
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ee362aeb-9e20-49b7-b504-21ef2e9bb2da.png" alt="Visualization of an artificial intelligence project displaying neural network diagrams, data flow, and predictive analytics on a futuristic holographic screen" class="w-full h-48 object-cover" onerror="this.style.display='none'">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Prediksi Kegagalan Sistem IT</h3>
+                        <p class="text-gray-600 mb-4">Model machine learning menggunakan Python untuk memprediksi kegagalan sistem berdasarkan data historis.</p>
+                        <a href="#" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition">Lihat Detail</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Pendidikan</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f6b7e4bc-3569-4ccc-baec-fa406beab331.png" alt="Official illustration of Universitas Islam Negeri Sunan Gunung Djati Bandung campus with Islamic architectural elements, academic buildings, students in modern attire, and educational icons floating around" class="w-full mb-6 rounded-lg" onerror="this.style.display='none'">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-2">Universitas Islam Negeri Sunan Gunung Djati Bandung</h3>
+                <p class="text-lg text-gray-600 mb-2">Sarjana Teknik Informatika (S1)</p>
+                <p class="text-lg text-gray-700 mb-4">Tahun: 2020 - Sekarang<br>Lokasi: Bandung, Indonesia</p>
+                <p class="text-gray-700">Di universitas ini, saya telah terlibat dalam berbagai mata kuliah seperti Algoritma & Struktur Data, Sistem Operasi, Basis Data, dan Kecerdasan Buatan. Saya juga telah menyelesaikan beberapa proyek praktis dan partisipasi dalam kegiatan ekstrakurikuler terkait teknologi.</p>
+                <ul class="list-disc list-inside text-gray-700 mt-4">
+                    <li>Proyek akhir semester tentang pengembangan website e-commerce.</li>
+                    <li>Anggota komunitas teknologi kampus.</li>
+                    <li>Peserta lomba pemrograman tingkat regional.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Kontak</h2>
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Informasi Kontak</h3>
+                    <p class="text-gray-700 mb-2"><strong>Email:</strong> nabilah.karim@student.uinbandung.ac.id</p>
+                    <p class="text-gray-700 mb-2"><strong>Nomor Telepon:</strong> +62 812-3456-7890</p>
+                    <p class="text-gray-700 mb-2"><strong>LinkedIn:</strong> linkedin.com/in/nabilahzahra</p>
+                    <p class="text-gray-700 mb-4"><strong>Alamat:</strong> Bandung, Jawa Barat, Indonesia</p>
+                    <p class="text-gray-700">Saya selalu terbuka untuk diskusi tentang teknologi, kolaborasi proyek, atau peluang karir. Jangan ragu untuk menghubungi saya!</p>
+                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/600aaad9-76dd-4fa0-bb5b-d4899fbb1423.png" alt="Illustrative scene of professional networking with email icons, phone symbols, and connection nodes in a connected global map background" class="rounded-lg mt-6" onerror="this.style.display='none'">
+                </div>
+                <div class="md:w-1/2 md:pl-10">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Kirim Pesan</h3>
+                    <form class="space-y-4" id="contact-form">
+                        <div>
+                            <label class="block text-gray-700">Nama</label>
+                            <input type="text" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Email</label>
+                            <input type="email" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700">Pesan</label>
+                            <textarea class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition">Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2023 Nabilah Nuril Zahra M. Karim. Semua hak dilindungi.</p>
+            <p class="mt-2">Portofolio dibuat dengan hati untuk menunjukkan passion di dunia teknologi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for interactivity
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Animate skill bars on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const fills = entry.target.querySelectorAll('.skill-fill');
+                    fills.forEach(fill => {
+                        fill.style.width = fill.style.width || '0%';
+                    });
+                }
+            });
+        });
+        observer.observe(document.getElementById('skills'));
+
+        // Form submission (basic alert for demo)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah dikirim (ini adalah demo; implementasi backend diperlukan untuk pengiriman sebenarnya).');
+        });
+    </script>
 </body>
 </html>
+</content>
+</create_file>
